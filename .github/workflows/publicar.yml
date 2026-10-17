@@ -81,7 +81,8 @@ jobs:
         run: |
           git config user.name  'Publicador SSCONPAV'
           git config user.email 'actions@github.com'
-          git add versao.json versao-sistema.json 2>/dev/null || true
+          git add versao.json 2>/dev/null || true
+          git add versao-sistema.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo 'Nada a atualizar: os versao.json ja batiam com os HTML.'
           else
